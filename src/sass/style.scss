@@ -1,0 +1,36 @@
+@use "base";
+@use "components";
+
+body {
+  cursor: pointer;
+}
+
+.componentsContainer {
+  position: relative;
+  margin-inline: auto;
+
+  .gameboard {
+    transition: 1s ease-in-out;
+  }
+
+  .accueil {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+  }
+
+  &.notplayed {
+    .accueil {
+      background: hsl(0 0% 100% / 0.9);
+    }
+  }
+
+  &.finishScreen {
+    .finalScreen {
+      background: hsl(0 0% 100% / 0.9);
+    }
+  }
+}

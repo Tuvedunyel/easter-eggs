@@ -1,0 +1,79 @@
+@use "../abstracts" as var;
+
+.notplayed footer,
+.finishScreen footer {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
+  width: fit-content;
+  width: -moz-fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 99;
+  background: white;
+  padding: 0.6rem 2.7rem 0.6rem 1.4rem;
+
+  &::before {
+    content: "";
+    width: 67px;
+    height: 67px;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: -7%;
+  }
+
+  img {
+    max-width: 40px;
+    filter: grayscale(100%);
+    transition: 1s ease-in-out;
+
+    @include var.breakpoint(392px) {
+      max-width: 30px;
+    }
+
+    &:not(:first-of-type) {
+      margin-right: 1em;
+    }
+
+    &.discover {
+      filter: grayscale(0%);
+      animation: eggsfooter 2s infinite;
+
+      &:nth-of-type(2) {
+        animation-delay: 1s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.7s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 1.2s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 1.4s;
+      }
+      &:nth-of-type(6) {
+        animation-delay: 1.7s;
+      }
+    }
+  }
+}
+
+@keyframes eggsfooter {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

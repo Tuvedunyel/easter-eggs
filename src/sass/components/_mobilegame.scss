@@ -1,0 +1,369 @@
+@use "../abstracts" as var;
+
+.container.gameboard.mobile {
+  background: url("../img/BG.png");
+  width: 88%;
+  height: 834px;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+
+  &.complete {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  @include var.breakpoint(673px) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  @include var.breakpoint(673px) {
+    background-size: cover;
+  }
+
+  .eggButton {
+    left: 50%;
+    top: 25%;
+    &.discover {
+      z-index: 1;
+    }
+
+    @include var.breakpoint(392px) {
+      & .firstEgg {
+        left: 63%;
+        top: 37%;
+        max-width: 25%;
+      }
+    }
+
+    &.second {
+      left: 74%;
+      top: 9%;
+
+      @include var.breakpoint(1007px) {
+        width: 40px;
+        top: 5%;
+        left: 76%;
+      }
+
+      @include var.breakpoint(601px) {
+        left: 69%;
+      }
+
+      @include var.breakpoint(673px) {
+        left: 73%;
+      }
+
+      @include var.breakpoint(610px) {
+        left: 69%;
+      }
+
+      @include var.breakpoint(579px) {
+        left: 66%;
+      }
+      @include var.breakpoint(560px) {
+        left: 63%;
+      }
+      @include var.breakpoint(533px) {
+        left: 58%;
+      }
+      @include var.breakpoint(502px) {
+        left: 53%;
+      }
+      @include var.breakpoint(467px) {
+        left: 43%;
+      }
+      @include var.breakpoint(406px) {
+        left: 33%;
+      }
+      @include var.breakpoint(348px) {
+        left: 23%;
+      }
+    }
+
+    &.third {
+      left: 19%;
+      top: 18%;
+    }
+
+    &.fourth {
+      left: 6%;
+      top: 10%;
+    }
+
+    &.fifth {
+      left: 4%;
+      top: 30%;
+      width: 67px;
+      height: 50px;
+
+      img {
+        @include var.breakpoint(1025px) {
+          top: 45%;
+          left: -8%;
+        }
+        @include var.breakpoint(783px) {
+          transform: translate(9px, -36px) rotate(360deg);
+        }
+      }
+    }
+
+    &.six {
+      left: 47%;
+      top: 28%;
+
+      @include var.breakpoint(601px) {
+        left: 40%;
+      }
+
+      @include var.breakpoint(673px) {
+        left: 42%;
+      }
+
+      @include var.breakpoint(459px) {
+        left: 167%;
+        width: 100px;
+      }
+
+      @include var.breakpoint(449px) {
+        left: 30%;
+      }
+
+      @include var.breakpoint(392px) {
+        width: 50px;
+        height: 70px;
+      }
+    }
+  }
+}
+
+.mobile__cabaneContainer {
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+
+  @include var.breakpoint(392px) {
+    width: 290px;
+  }
+}
+
+.mobile__marreContainer {
+  position: absolute;
+  left: 6%;
+  top: 30%;
+  width: 400px;
+  z-index: 0;
+
+  @include var.breakpoint(1007px) {
+    width: 300px;
+    top: 30%;
+  }
+
+  @include var.breakpoint(921px) {
+    top: 34%;
+    left: 8%;
+  }
+
+  @include var.breakpoint(893px) {
+    left: 4%;
+    width: 271px;
+    z-index: 10;
+  }
+
+  @include var.breakpoint(805px) {
+    top: 35%;
+    left: 10%;
+    z-index: 10;
+    .marre {
+      display: none;
+    }
+  }
+
+  @include var.breakpoint(763px) {
+    left: 8%;
+  }
+
+  @include var.breakpoint(699px) {
+    left: 4%;
+  }
+  @include var.breakpoint(649px) {
+    left: 1%;
+  }
+  @include var.breakpoint(601px) {
+    left: 0%;
+  }
+  @include var.breakpoint(392px) {
+    left: 6%;
+    top: 26%;
+  }
+}
+
+.plante__mobile {
+  width: 40px;
+  position: absolute;
+  top: 0%;
+  left: 75%;
+
+  @include var.breakpoint(1007px) {
+    top: -10%;
+  }
+
+  @include var.breakpoint(805px) {
+    display: none;
+  }
+}
+
+.treeTwo__mobile {
+  position: absolute;
+  width: 300px;
+  left: 67%;
+
+  @include var.breakpoint(1025px) {
+    left: 58%;
+  }
+
+  @include var.breakpoint(777px) {
+    left: 35%;
+    top: 33%;
+    .treeTwo__img {
+      display: none;
+    }
+
+    .eggButton.six.discover img {
+      transform: translateY(0);
+    }
+  }
+
+  @include var.breakpoint(459px) {
+    width: 50px;
+  }
+
+  @include var.breakpoint(392px) {
+    top: 24%;
+    left: 51%;
+  }
+}
+
+.poulaillerContainer__mobile {
+  position: absolute;
+  width: 138px;
+  left: 25%;
+  top: 60%;
+
+  @include var.breakpoint(857px) {
+    left: 26%;
+    top: 54%;
+  }
+
+  @include var.breakpoint(601px) {
+    top: 48%;
+    left: 23%;
+  }
+
+  @include var.breakpoint(673px) {
+    left: 14%;
+  }
+
+  @include var.breakpoint(517px) {
+    left: 12%;
+  }
+
+  @include var.breakpoint(464px) {
+    left: 9%;
+    top: 42%;
+  }
+}
+
+.tenteContainer__mobile {
+  position: absolute;
+  top: 55%;
+  right: 5%;
+  width: 300px;
+  z-index: 3;
+
+  @include var.breakpoint(1025px) {
+    top: 48%;
+    right: 15%;
+  }
+
+  @include var.breakpoint(673px) {
+    top: 51%;
+    right: 10%;
+  }
+
+  @include var.breakpoint(649px) {
+    right: 5%;
+  }
+
+  @include var.breakpoint(601px) {
+    right: 4%;
+    top: 45%;
+  }
+
+  @include var.breakpoint(517px) {
+    top: 56%;
+  }
+}
+
+.mobile__treeTroisContainer {
+  position: absolute;
+  width: 300px;
+  left: 57%;
+  top: 20%;
+
+  @include var.breakpoint(1025px) {
+    left: 58%;
+    top: 14%;
+    width: 50px;
+    z-index: 4;
+    .treeTrois {
+      display: none;
+    }
+  }
+
+  @include var.breakpoint(929px) {
+    left: 61%;
+  }
+  @include var.breakpoint(795px) {
+    left: 63%;
+  }
+  @include var.breakpoint(665px) {
+    left: 67%;
+  }
+  @include var.breakpoint(497px) {
+    left: 74%;
+  }
+
+  @include var.breakpoint(392px) {
+    left: 69%;
+    top: 9%;
+  }
+
+  .nid {
+    position: absolute;
+    top: 33%;
+    width: 45px;
+    left: 8%;
+
+    @include var.breakpoint(783px) {
+      width: 32px;
+    }
+  }
+
+  .fanions {
+    display: none;
+  }
+
+  .eggButton.fifth.discover img {
+    transform: translate(24px, -10px) rotate(360deg);
+
+    @include var.breakpoint(869px) {
+      transform: translate(18px, -33px) rotate(360deg);
+    }
+  }
+}

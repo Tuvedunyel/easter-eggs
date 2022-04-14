@@ -1,0 +1,203 @@
+@use "../abstracts" as var;
+
+.finalScreen {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: none;
+
+  h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include var.breakpoint(817px) {
+      font-size: 6rem;
+    }
+
+    img {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  strong {
+    font-size: 2.9rem;
+    font-weight: 600;
+    margin-top: 0.2em;
+    text-align: center;
+
+    @include var.breakpoint(669px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &.mobile {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 4em;
+      column-gap: 5em;
+
+      @include var.breakpoint(514px) {
+        column-gap: 3em;
+      }
+      @include var.breakpoint(414px) {
+        column-gap: 1.5em;
+      }
+
+      li:not(:last-of-type) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-top: 1em;
+  text-align: center;
+
+  @include var.breakpoint(669px) {
+    font-size: 2rem;
+  }
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 4em;
+
+  @include var.breakpoint(817px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1em;
+    column-gap: 1.5em;
+    margin-top: 1em;
+  }
+
+  @include var.breakpoint(669px) {
+    font-size: 1.8rem;
+  }
+  li:not(:last-of-type) {
+    margin-right: 1.5em;
+
+    @include var.breakpoint(817px) {
+      margin-right: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &::after {
+      content: "";
+      margin-bottom: 1em;
+      width: 100px;
+      height: 100px;
+
+      @include var.breakpoint(669px) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &#gael::after {
+      background: url("./../img/egg-un.png");
+    }
+    &#guillaume::after {
+      background: url("./../img/egg-deux.png");
+    }
+    &#romain::after {
+      background: url("./../img/egg-trois.png");
+    }
+    &#anais::after {
+      background: url("./../img/egg-quatre.png");
+    }
+    &#gregoire::after {
+      background: url("./../img/egg-cinq.png");
+    }
+    &#zoe::after {
+      background: url("./../img/egg-six.png");
+    }
+
+    &#gael::after,
+    &#romain::after,
+    &#guillaume::after,
+    &#anais::after,
+    &#gregoire::after,
+    &#zoe::after {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.newsletter {
+  margin-top: 6rem;
+  background-color: #041624;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 50px 0 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include var.breakpoint(817px) {
+    margin-top: 0.6rem;
+  }
+
+  h3 {
+    background-color: transparent;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: "Exo", sans-serif;
+    font-weight: 400;
+    padding: 0;
+  }
+
+  img {
+    width: 190px;
+    margin: 36px 0;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-size: 21px;
+    font-family: "Exo", sans-serif;
+    font-weight: 200;
+    max-width: 45%;
+    @include var.breakpoint(1287px) {
+      max-width: 95%;
+    }
+
+    strong {
+      font-size: 21px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+}
