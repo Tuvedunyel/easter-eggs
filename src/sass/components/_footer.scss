@@ -17,6 +17,10 @@ footer {
   background: white;
   padding: 0.6rem 2.7rem 0.6rem 1.4rem;
 
+  @include var.breakpoint(600px) {
+    right: -1%;
+  }
+
   &::before {
     content: "";
     width: 67px;
