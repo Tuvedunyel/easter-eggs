@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "react-image-webp";
 
 const Accueil = ({ setIsPlaying, isMobile }) => {
+
+  useEffect ( () => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div
       className={isMobile ? "container accueil mobile" : "container accueil"}

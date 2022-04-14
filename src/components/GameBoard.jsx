@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "atropos/css";
 import Atropos from "atropos/react";
 import Decor from "./Decor";
@@ -13,6 +13,10 @@ const GameBoard = ({
   gameComplete,
 }) => {
   const [eggDecrementer, setEggDecrementer] = useState(6);
+
+  useEffect( () => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const handleFirstEgg = () => {
     if (eggs[0].found === false) {

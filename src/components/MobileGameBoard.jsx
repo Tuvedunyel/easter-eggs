@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "react-image-webp";
 
 const MobileGameBoard = ({ setEggsFound, eggsFound, eggs, setEggs, gameComplete }) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const handleFirstEgg = () => {
     if (eggs[0].found === false) {
       // setEggs[0].found = true
