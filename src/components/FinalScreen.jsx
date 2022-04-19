@@ -3,7 +3,6 @@ import Image from "react-image-webp";
 import Newsletter from "./Newsletter";
 
 const FinalScreen = ({ isMobile }) => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,13 +14,19 @@ const FinalScreen = ({ isMobile }) => {
       }
     >
       <header>
-        <img
-          src='https://btg-communication.fr/wp-content/uploads/2018/11/logo-btg-encadre.svg'
-          alt='BTG Communication, agence de communication à Tours'
-        />
+        <a href='https://www.btg-communication.fr' target='_blank'>
+          <span className='screen-reader-text'>
+            Se rendre sur le site de BTG Communication
+          </span>
+          <img
+            src='https://btg-communication.fr/wp-content/uploads/2018/11/logo-btg-encadre.svg'
+            alt='BTG Communication, agence de communication à Tours'
+          />
+        </a>
       </header>
       <h1>
-        <Image loading="lazy"
+        <Image
+          loading='lazy'
           src='./src/img/logo-btg.png'
           webp='./src/img/logo-btg.webp'
           alt='BTG Communication, agence de communication à 360°'
@@ -43,12 +48,12 @@ const FinalScreen = ({ isMobile }) => {
           src='https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://btg-communication.fr/wp-content/themes/btg/img/icons/wave-yellow.gif'
           alt=''
         />
-        <p className="newsTexte">
+        <p className='newsTexte'>
           Recevez tous les mois les actualités de notre agence de communication,
           des articles sur
           <strong>
             {" "}
-            le marketing, la création de site internet, les bonnes pratigues,
+            le marketing, la création de site internet, les bonnes pratiques,
             des guides etc.
           </strong>
         </p>

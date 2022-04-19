@@ -12,10 +12,13 @@ const Accueil = ({ setIsPlaying, isMobile }) => {
       className={isMobile ? "container accueil mobile" : "container accueil"}
     >
       <header>
-        <img
-          src='https://btg-communication.fr/wp-content/uploads/2018/11/logo-btg-encadre.svg'
-          alt='BTG Communication, agence de communication à Tours'
-        />
+        <a href="https://www.btg-communication.fr" target="_blank">
+          <span className="screen-reader-text">Se rendre sur le site de BTG Communication</span>
+          <img
+            src='https://btg-communication.fr/wp-content/uploads/2018/11/logo-btg-encadre.svg'
+            alt='BTG Communication, agence de communication à Tours'
+          />
+        </a>
       </header>
       <h1>
         <Image loading="lazy"
